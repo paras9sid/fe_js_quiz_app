@@ -1,5 +1,9 @@
 // correct answers for all quesions- A taken by default for now
-const correctAnswer = ["A","A","A","A","A"]
+// const correctAnswer = ["A","A","A","A","A"]
+
+// changed questions answer
+const correctAnswer = ["D", "B", "C", "B", "D"];
+
 const form = document.querySelector(".quiz-form");
 const result = document.querySelector(".result")
 const questions = document.querySelectorAll(".question");
