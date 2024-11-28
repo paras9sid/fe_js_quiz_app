@@ -18,12 +18,19 @@
             <div class="result hide">
                 <p>You scored 5/5!</p>
                 <p class="reload">
-                    <button>Try Again?</button>
+                    
+                    <!-- below function inbuilt for reload -->
+
+                    <!-- <button onClick="window.location.reload()">Try Again?</button> -->
+                    <button onClick="document.location.reload(true)">Try Again?</button>
+
+                    <!-- manual function creaed in js file -->
+                    <!-- <button onClick="reload()">Try Again?</button> -->
                 </p>
             </div>
 
             <form class="quiz-form">
-                <div class="question correct">
+                <div class="question">
                     <p>1. Lorem ipsum dolor sit amet.</p>
                     <div class="option">
                         <input type="radio" name="q1" value="A" checked>
@@ -43,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="question wrong">
+                <div class="question">
                     <p>2. Lorem ipsum dolor sit amet.</p>
                     <div class="option">
                         <input type="radio" name="q2" value="A" checked>

@@ -2,6 +2,10 @@
 const correctAnswer = ["A","A","A","A","A"]
 const form = document.querySelector(".quiz-form");
 const result = document.querySelector(".result")
+const questions = document.querySelectorAll(".question");
+
+// console.log(questions); // all questions
+// console.log(questions[0]); // quesion at index 0 - 1st one
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -16,6 +20,12 @@ form.addEventListener("submit", (event) => {
         if(answer == correctAnswer[index]){
             // console.log("Correct answer", index);
             score += 1;
+
+            //added correct class to the question which has been answered correctly
+            questions[index].classList.add("correct");
+        }else{
+            //added incorrect class to the question which has been answered incorrectly
+            questions[index].classList.add("incorrect");
         }
     });
     // console.log("Total Corrent answers: ", score);
@@ -24,3 +34,8 @@ form.addEventListener("submit", (event) => {
     result.classList.remove("hide"); // will remove hide class and who that score box
     result.querySelector("p").textContent = `You scored ${score}/5!`; // will display real time dynamic score 
 });
+
+
+function reload(event){
+    window.location.reload();
+}   
